@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pagination_riverpod/controller/paginator_controller.dart';
+import 'package:pagination_riverpod/core/observer/observer.dart';
 
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(ProviderScope(observers: [Observer()], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
